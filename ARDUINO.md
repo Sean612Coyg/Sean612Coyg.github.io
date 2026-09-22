@@ -200,7 +200,7 @@ Then it was with the fan. I had to 3-D print something that contains the fan, bu
 
 ## My final product and code
 
-<video src="./videos/videofinal.mp4" controls width="600">
+<video src="/videofinal.mp4" type="video/mp4" controls width="600">
   Your browser does not support the video tag.
 </video>
 /*
