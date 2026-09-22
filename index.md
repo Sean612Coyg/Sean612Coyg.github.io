@@ -1,5 +1,5 @@
 ## Sean Wei
-theme: jekyll-theme-minimal
+
 
 ##About me
 Welcome to my documentation page. I am a student in Tech & Innovation at The Webb schools and I will be exploring electronics,arduino programming and much more.
