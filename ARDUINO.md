@@ -113,10 +113,39 @@ checks if the button is pressed in this exact instant --> (from HIGH to LOW).
         updateStatusLine();
       }
     }**
-    
+This **if** means that if there is time left on the clock, flip the timer between running and paused, reset the 1-second interval timer, and update the display status.
+
+<img width="470" height="189" alt="Screenshot 2026-09-22 at 10 00 46 AM" src="https://github.com/user-attachments/assets/a1f36f24-0d9b-4022-af68-304800f5ba62" />
+
+Detects when the Reset button goes from HIGH to LOW.
+
+**running = false;** Stops the countdown.
+
+**remainingSeconds = countdownStartSeconds;** Resets the clock variable back to its initial value.
+
+**showTime() & updateStatusLine()** Updates the LCD display to show the starting time and "Paused".
+
+**noTone(BUZZER_PIN);** means turns off the buzzer output in case the alarm is currently ringing.
 
 
+**lastStartPauseState = startPauseReading; lastResetState = resetReading;**
 
+This updates the time as well as the "state of the button" allowing the cycle to repeat smoothly without missing a single button press.
+
+<img width="357" height="77" alt="Screenshot 2026-09-22 at 10 05 27 AM" src="https://github.com/user-attachments/assets/bda5ccac-007e-477c-b509-56469a7d6f16" />
+
+This code converts the total (remainingSeconds) into minutes and seconds using integer math:
+
+Division (/ 60): Calculates total full minutes.
+
+Modulo (% 60): Calculates the leftover seconds.
+
+
+<img width="410" height="178" alt="Screenshot 2026-09-22 at 10 06 30 AM" src="https://github.com/user-attachments/assets/97a4cc67-296a-405a-8bc0-8a9e3109e3e1" />
+
+In LCD display the initial position must be (0,0) to display. And the first line moves the LCD cursor to row 0, column 0.
+Leading Zeros: if (minutes < 10) and if (seconds < 10) add a "0" prefix before single-digit numbers so the screen displays 05:09 instead of 5:9.
+Trailing Spaces ("   "): Overwrites remaining characters on the line to prevent old digits from staying visible when the number of digits decreases.
 
 
 
