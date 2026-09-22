@@ -42,6 +42,12 @@ The motor connected to {A5}
 
 Through this project, the skill that I am building on is the constant trouble shooting and wire management. Since, there are so much pins involved with the LCD screen, I really have to keep track of which analog pin goes to which pin of the LCD screen. I also have gone through a lot of issues with my breadboard and LCD screen which I will explain later. 
 
+## The LCD Screen
+
+<img width="970" height="728" alt="image" src="https://github.com/user-attachments/assets/b065893b-34cb-4748-91c8-6f7db75fd55f" />
+
+I chose to use a LCD display screen for this project as a new component. I found its information on [Link](https://docs.arduino.cc/learn/electronics/lcd-displays/). I used the LCD because it is versatile, and it could display a lot of things on it. Moreover, the LCD screen is interconnectable to other pieces of components such as the buzzer and the potentiometer. 
+
 ## Wiring the Analogs 
 
 <img width="778" height="566" alt="Screenshot 2026-09-21 at 9 52 53 PM" src="https://github.com/user-attachments/assets/0a5ad6d9-b9f5-42f8-a514-76124a6eb703" />
@@ -157,9 +163,11 @@ Prints "Running..." if running is true, or "Paused" if running is false.
 
 **void timeUp() { lcd.setCursor(0, 1); lcd.print("TIME'S UP!!!    ");**
 
-This code displays the time up on LCD screen.
+This code displays the "time up" output on LCD screen.
 
 <img width="666" height="242" alt="Screenshot 2026-09-22 at 10 30 40 AM" src="https://github.com/user-attachments/assets/99935e5b-021b-4516-9def-204e57761ddf" />
+
+
 
 
 
