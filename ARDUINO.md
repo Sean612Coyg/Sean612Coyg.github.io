@@ -390,7 +390,7 @@ void timeUp() {
 
 ## Peer Support
 
-Watchi really helped me with teaching me how to wire the LCD display. He gave me tips on how to wire correctly, and how to manage wires. He also provided me with pictures of his design so I could learn from him. He inspired me to change my design from a lyric producer to an alarm clock, and gave me ideas about how I should use the analog pins. 
+Watchi really helped me with teaching me how to wire the LCD display. He gave me tips on how to wire correctly, and how to manage wires. He also provided me with pictures of his design so I could learn from him. He inspired me to change my design from a lyric producer to an alarm clock, and gave me ideas about how I should use the analog pins. Watchi also helped me understand how to use the Potentiometer. He taught me that it is a must have for my circuit and how it acts as a resistor for the current in the LCD display.
 
 ## Reflection
 My timer system would be useful for people who are taking a break from electronics, for example. They could set the alarm for 5 minutes and then chill until the buzzer starts to beep signaling that their break is over. I could also use this as an interval for waking me up. 
