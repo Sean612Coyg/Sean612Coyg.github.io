@@ -168,6 +168,41 @@ This code displays the "time up" output on LCD screen.
 <img width="666" height="242" alt="Screenshot 2026-09-22 at 10 30 40 AM" src="https://github.com/user-attachments/assets/99935e5b-021b-4516-9def-204e57761ddf" />
 
 
+Then there is a while loop, where it would run the code continuously for up to 10 seconds of the beeping sound for the buzzer. 
+
+The if checks inside the while loop if the reset button is pressed hence the **(digitalWrite(MOTOR_PIN, LOW);**) 
+
+**noTone(BUZZER_PIN);** means that if the button is pressed it turns off the sound and motor. 
+
+<img width="672" height="230" alt="Screenshot 2026-09-22 at 12 22 51 PM" src="https://github.com/user-attachments/assets/d8dcccec-91e7-40cf-93c3-adc95e56c5b2" />
+
+The first line means that it takes a snapshot of the current time so the code can measure how much time has passed since the last sound toggle.
+
+The if means that if the Alarm is producing noise (toneOn = true) and it has been sounding for at least 300 milliseconds. It turns the sound off.
+
+The else if conveys that is the Alarm is silent (toneOn = true) and it has been silent for 200 millisecond, it turns the sound on.
+
+In summary the if shuts the sound off after 300ms and the else if turns the sound back on after 200ms pause. 
+
+
+## Things that did not work out for me
+
+### The first is the the lack of Analog pins
+
+My first design was to create a LCD display that has a buzzer and the LCD would display the lyrics of a song. But that did not work out for me as I needed more analog pins than what the Arduino supplied. So instead of it displaying lyrics, I would use the LCD to do a countdown alarm requiring way less analog pins than my original design. 
+
+Then it was with the fan. I had to 3-D print something that contains the fan, but since the fan did not fit in the disign and the library was closed, I had no way to fit the fan in. So I made the fan a "motor" for my Arduino. 
+
+<img width="1280" height="1707" alt="dbc7097e7983182a59a28edbcce8748f" src="https://github.com/user-attachments/assets/9fc49afb-a9a8-4589-81ec-afb8de3d6ef6" />
+
+
+## My final product and code
+
+
+
+
+
+
 
 
 
