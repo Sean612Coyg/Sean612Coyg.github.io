@@ -151,6 +151,16 @@ Trailing Spaces ("   "): Overwrites remaining characters on the line to prevent 
 
 <img width="443" height="165" alt="Screenshot 2026-09-22 at 10 18 07 AM" src="https://github.com/user-attachments/assets/66054e53-820b-49c8-929d-79e87ec09c44" />
 
+Sets the LCD cursor to the beginning of the second row (row 1). (0,1)
+
+Prints "Running..." if running is true, or "Paused" if running is false.
+
+**void timeUp() { lcd.setCursor(0, 1); lcd.print("TIME'S UP!!!    ");**
+
+This code displays the time up on LCD screen.
+
+
+
 
 
 
