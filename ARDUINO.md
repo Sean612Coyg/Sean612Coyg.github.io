@@ -388,6 +388,7 @@ void timeUp() {
 
 ## Peer Support
 
+Watchi really helped me with teaching me how to wire the LCD display. He gave me tips on how to wire correctly, and how to manage wires. He also provided me with pictures of his design so I could learn from him. He inspired me to change my design from a lyric producer to an alarm clock, and gave me ideas about how I should use the analog pins. 
 
 ## Reflection
 My timer system would be useful for people who are taking a break from electronics, for example. They could set the alarm for 5 minutes and then chill until the buzzer starts to beep signaling that their break is over. I could also use this as an interval for waking me up. 
@@ -397,6 +398,25 @@ Some modifications could be I change my code so that so users can change the dur
 
 
 I would use the non-blocking code as without them, adding features like dynamic button menu navigation or multi-pattern alarms would cause the system to freeze or become unresponsive to user input. These include, delay(). 
+
+
+## Chapters while designing 
+
+<img width="1280" height="1707" alt="d66f8055d974f9afe4f5febc46c28516" src="https://github.com/user-attachments/assets/71098f76-48ac-4ee3-99c6-2fe0c684a285" />
+
+In this image, I plugged in all the LCD wires but it didn't turn on. I later found that my code didn't correspond with my analog pin and I changed it later. 
+
+<img width="1280" height="1707" alt="5732ef0678e345cf412e3656c8c81e93" src="https://github.com/user-attachments/assets/662f7814-d6ed-42a9-9309-142d15649eaf" />
+
+In this image, I added a Potentiometer which would help me change the brightness for my LCD. It is a must-have piece for my Arduino project as it controls the current flowing. 
+
+<img width="1280" height="1707" alt="e495806d93968741f2f12c0f6c2dbf23" src="https://github.com/user-attachments/assets/dad7a4b5-7793-49ae-abb0-08924b9936e1" />
+
+I then added buttons to this project so the time could be controlled. 
+
+
+
+
  
 
 
