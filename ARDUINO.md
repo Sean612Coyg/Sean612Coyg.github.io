@@ -415,8 +415,9 @@ In this image, I added a Potentiometer which would help me change the brightness
 I then added buttons to this project so the time could be controlled. 
 
 
+video/06add66bcab2f785d333c3f21075d628.mp4
 
-
+This video showcases my LCD design with the button functioning before I added the buzzer. 
  
 
 
