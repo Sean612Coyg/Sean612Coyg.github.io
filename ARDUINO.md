@@ -144,8 +144,16 @@ Modulo (% 60): Calculates the leftover seconds.
 <img width="410" height="178" alt="Screenshot 2026-09-22 at 10 06 30 AM" src="https://github.com/user-attachments/assets/97a4cc67-296a-405a-8bc0-8a9e3109e3e1" />
 
 In LCD display the initial position must be (0,0) to display. And the first line moves the LCD cursor to row 0, column 0.
-Leading Zeros: if (minutes < 10) and if (seconds < 10) add a "0" prefix before single-digit numbers so the screen displays 05:09 instead of 5:9.
+
+Leading Zeros: if (minutes < 10) and if (seconds < 10) add a "0" prefix before single-digit numbers so the screen displays 05:09 instead of 5:9."Basically, it fixes the format and adds a "0" before every single digit number."
+
 Trailing Spaces ("   "): Overwrites remaining characters on the line to prevent old digits from staying visible when the number of digits decreases.
+
+<img width="443" height="165" alt="Screenshot 2026-09-22 at 10 18 07 AM" src="https://github.com/user-attachments/assets/66054e53-820b-49c8-929d-79e87ec09c44" />
+
+
+
+
 
 
 
