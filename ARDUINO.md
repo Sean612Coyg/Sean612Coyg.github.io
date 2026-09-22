@@ -159,6 +159,7 @@ Prints "Running..." if running is true, or "Paused" if running is false.
 
 This code displays the time up on LCD screen.
 
+<img width="666" height="242" alt="Screenshot 2026-09-22 at 10 30 40 AM" src="https://github.com/user-attachments/assets/99935e5b-021b-4516-9def-204e57761ddf" />
 
 
 
