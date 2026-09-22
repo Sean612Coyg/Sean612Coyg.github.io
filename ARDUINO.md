@@ -79,6 +79,42 @@ The code inside the setup configures the hardware pins for the button, motor, an
   lcd.setCursor(0, 1);
   lcd.print("Press to start");**
 
+<img width="474" height="283" alt="Screenshot 2026-09-22 at 9 30 50 AM" src="https://github.com/user-attachments/assets/c97b5eb3-d8a6-4d66-94e7-60b11de4368e" />
+
+In loop() the code makes it so it could continuously check for button inputs while tracking time using millis(). 
+
+Every 1000 milliseconds(1 sec) that the timer is active (running == true), it decreases the remaining time by 1.
+
+Then it would refresh the screen and trigger timeUp() alarm when the timer reaches zero. 
+
+
+<img width="574" height="257" alt="Screenshot 2026-09-22 at 9 34 17 AM" src="https://github.com/user-attachments/assets/49a13b24-fa7e-4de0-baad-a266c9050174" />
+
+handleButtons() acts as a function that reads the state of both of the buttons(reset, and pause/start). 
+
+the digitalRead() checks the Voltage status on START_PAUSE_PIN and RESET_PIN. It returns to HIGH when released and LOW when pressed.
+
+Then there is a if ...
+
+The first if is for comparing the current time against the last time a button is pressed. If at least 50 millisecond (debounceDalay) have passed, it would allow the button to be processed. This hinders the rapid contact present in the button. 
+
+<img width="552" height="161" alt="Screenshot 2026-09-22 at 9 38 56 AM" src="https://github.com/user-attachments/assets/cee87c79-f685-4c7b-b339-963988af1bb0" />
+
+Then there is two {if}.
+
+The first one: **if (startPauseReading == LOW && lastStartPauseState == HIGH) {**
+checks if the button is pressed in this exact instant --> (from HIGH to LOW). 
+
+**lastDebounceTime = millis();** means that it resets the debounce timestamp to start the 50ms timer over again
+
+**if (remainingSeconds > 0) {
+        running = !running;
+        lastTickMillis = millis();
+        updateStatusLine();
+      }
+    }**
+    
+
 
 
 
