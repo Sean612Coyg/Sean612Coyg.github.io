@@ -200,8 +200,8 @@ Then it was with the fan. I had to 3-D print something that contains the fan, bu
 
 ## My final product and code
 
-<video src="videofinal.mp4" controls width="600">
-  Testing
+<video src="./videos/videofinal.mp4" controls width="600">
+  Your browser does not support the video tag.
 </video>
 /*
   LCD Countdown Timer (8-bit parallel LCD, no I2C backpack)
