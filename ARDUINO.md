@@ -198,9 +198,10 @@ Then it was with the fan. I had to 3-D print something that contains the fan, bu
 
 ## My final product and code
 
-<video controls>
+<video width="700" controls>
   <source src="videos/videolast.mp4" type="video/mp4">
 </video>
+
 /*
   LCD Countdown Timer (8-bit parallel LCD, no I2C backpack)
   -----------------------------------------------------------
