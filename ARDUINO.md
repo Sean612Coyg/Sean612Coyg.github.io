@@ -201,8 +201,203 @@ Then it was with the fan. I had to 3-D print something that contains the fan, bu
 <video src="./videos/videolast.mp4" controls width="100%">
 </video>
 
+/*
+  LCD Countdown Timer (8-bit parallel LCD, no I2C backpack)
+  -----------------------------------------------------------
+  Wiring:
+    LCD RS -> Arduino 13
+    LCD RW -> GND (tied directly, not to an Arduino pin)
+    LCD E  -> Arduino 4
+    LCD D0 -> Arduino 5
+    LCD D1 -> Arduino 8
+    LCD D2 -> Arduino 9
+    LCD D3 -> Arduino 7
+    LCD D4 -> Arduino 12
+    LCD D5 -> Arduino 10
+    LCD D6 -> Arduino 6
+    LCD D7 -> Arduino 11
+
+    LCD VSS -> GND
+    LCD VDD -> 5V
+    LCD V0  -> center pin of a contrast potentiometer (other two legs to 5V and GND)
+    LCD A (backlight +) -> 5V (through a resistor if your board doesn't have one built in)
+    LCD K (backlight -) -> GND
+
+    Start/Pause button: one leg -> Pin 2, other leg -> GND
+    Reset button:       one leg -> Pin 3, other leg -> GND
+      (both use internal pull-ups, no external resistors needed)
+
+    Motor  -> Pin A5
+    Buzzer -> Pin A0 (positive leg), other leg -> GND
+
+  Library required: built-in "LiquidCrystal" (comes with Arduino IDE, no install needed)
+*/
+
+#include <LiquidCrystal.h>
+
+// ---- Configuration ----
+const int LCD_COLUMNS = 16;
+const int LCD_ROWS = 2;
+
+const int START_PAUSE_PIN = 2;
+const int RESET_PIN = 3;
+const int MOTOR_PIN = A5;
+const int BUZZER_PIN = A0;
+
+long countdownStartSeconds = 5;  // <-- change starting time here (in seconds)
+
+// ---- LCD pin setup: RS, E, D0, D1, D2, D3, D4, D5, D6, D7 ----
+LiquidCrystal lcd(13, 4, 5, 8, 9, 7, 12, 10, 6, 11);
+
+// ---- Globals ----
+long remainingSeconds = countdownStartSeconds;
+bool running = false;
+unsigned long lastTickMillis = 0;
+
+// simple debounce tracking
+bool lastStartPauseState = HIGH;
+bool lastResetState = HIGH;
+unsigned long lastDebounceTime = 0;
+const unsigned long debounceDelay = 50;
+
+void setup() {
+  pinMode(START_PAUSE_PIN, INPUT_PULLUP);
+  pinMode(RESET_PIN, INPUT_PULLUP);
+  pinMode(MOTOR_PIN, OUTPUT);
+  digitalWrite(MOTOR_PIN, LOW);
+  pinMode(BUZZER_PIN, OUTPUT);
+  digitalWrite(BUZZER_PIN, LOW);
+
+  lcd.begin(LCD_COLUMNS, LCD_ROWS);
+
+  showTime();
+  lcd.setCursor(0, 1);
+  lcd.print("Press to start");
+}
+
+void loop() {
+  handleButtons();
+
+  if (running && millis() - lastTickMillis >= 1000) {
+    lastTickMillis = millis();
+    if (remainingSeconds > 0) {
+      remainingSeconds--;
+      showTime();
+    }
+    if (remainingSeconds == 0) {
+      running = false;
+      timeUp();
+    }
+  }
+}
+
+void handleButtons() {
+  bool startPauseReading = digitalRead(START_PAUSE_PIN);
+  bool resetReading = digitalRead(RESET_PIN);
+
+  if (millis() - lastDebounceTime > debounceDelay) {
+    // Start/Pause button pressed (goes LOW when pressed)
+    if (startPauseReading == LOW && lastStartPauseState == HIGH) {
+      lastDebounceTime = millis();
+      if (remainingSeconds > 0) {
+        running = !running;
+        lastTickMillis = millis();
+        updateStatusLine();
+      }
+    }
+
+    // Reset button pressed
+    if (resetReading == LOW && lastResetState == HIGH) {
+      lastDebounceTime = millis();
+      running = false;
+      remainingSeconds = countdownStartSeconds;
+      showTime();
+      updateStatusLine();
+      noTone(BUZZER_PIN); // stop alarm if it was buzzing
+    }
+  }
+
+  lastStartPauseState = startPauseReading;
+  lastResetState = resetReading;
+}
+
+void showTime() {
+  int minutes = remainingSeconds / 60;
+  int seconds = remainingSeconds % 60;
+
+  lcd.setCursor(0, 0);
+  lcd.print("Time: ");
+  if (minutes < 10) lcd.print("0");
+  lcd.print(minutes);
+  lcd.print(":");
+  if (seconds < 10) lcd.print("0");
+  lcd.print(seconds);
+  lcd.print("   "); // clear leftover chars
+}
+
+void updateStatusLine() {
+  lcd.setCursor(0, 1);
+  if (running) {
+    lcd.print("Running...      ");
+  } else {
+    lcd.print("Paused          ");
+  }
+}
+
+void timeUp() {
+  lcd.setCursor(0, 1);
+  lcd.print("TIME'S UP!!!    ");
+
+  digitalWrite(MOTOR_PIN, HIGH);
+
+  // Alarm: beep on/off for up to 10 seconds, but stop immediately if Reset is pressed
+  unsigned long alarmStart = millis();
+  bool toneOn = false;
+  unsigned long lastToggle = millis();
+
+  while (millis() - alarmStart < 10000) {
+    // Check for Reset button press (LOW = pressed, using internal pull-up)
+    if (digitalRead(RESET_PIN) == LOW) {
+      noTone(BUZZER_PIN);
+      digitalWrite(MOTOR_PIN, LOW);
+      running = false;
+      remainingSeconds = countdownStartSeconds;
+      showTime();
+      lcd.setCursor(0, 1);
+      lcd.print("Paused          ");
+      delay(200); // brief debounce so the same press isn't re-read in loop()
+      return;     // exit timeUp() immediately
+    }
+
+    // Toggle tone on/off roughly every 300ms/200ms without blocking on Reset checks
+    unsigned long now = millis();
+    if (toneOn && now - lastToggle >= 300) {
+      noTone(BUZZER_PIN);
+      toneOn = false;
+      lastToggle = now;
+    } else if (!toneOn && now - lastToggle >= 200) {
+      tone(BUZZER_PIN, 2500);
+      toneOn = true;
+      lastToggle = now;
+    }
+  }
+
+  noTone(BUZZER_PIN);
+  digitalWrite(MOTOR_PIN, LOW);
+}
+
+## Peer Support
 
 
+## Reflection
+My timer system would be useful for people who are taking a break from electronics, for example. They could set the alarm for 5 minutes and then chill until the buzzer starts to beep signaling that their break is over. I could also use this as an interval for waking me up. 
+
+I could set a 30-minute timer and take a nice nap before going to afternoon activities.  
+Some modifications could be I change my code so that so users can change the duration on the fly without reprogramming the board. To do this, I could add a keypad to input the time without changing the code.  
+
+
+I would use the non-blocking code as without them, adding features like dynamic button menu navigation or multi-pattern alarms would cause the system to freeze or become unresponsive to user input. These include, delay(). 
+ 
 
 
 
