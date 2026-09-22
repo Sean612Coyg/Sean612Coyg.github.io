@@ -44,6 +44,8 @@ Through this project, the skill that I am building on is the constant trouble sh
 
 ## The LCD Screen
 
+![alt_text](images/LCD_photo.jpg)
+
 <img width="970" height="728" alt="image" src="https://github.com/user-attachments/assets/b065893b-34cb-4748-91c8-6f7db75fd55f" />
 
 I chose to use a LCD display screen for this project as a new component. I found its information on [Link](https://docs.arduino.cc/learn/electronics/lcd-displays/). I used the LCD because it is versatile, and it could display a lot of things on it. Moreover, the LCD screen is interconnectable to other pieces of components such as the buzzer and the potentiometer. 
@@ -198,7 +200,7 @@ Then it was with the fan. I had to 3-D print something that contains the fan, bu
 
 ## My final product and code
 
-<video src=".video/Fvideo.mp4" controls width="600">
+<video src="/video/Fvideo.mp4" controls width="600">
   Testing
 </video>
 /*
