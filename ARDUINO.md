@@ -416,12 +416,19 @@ In this image, I added a Potentiometer which would help me change the brightness
 
 I then added buttons to this project so the time could be controlled. 
 
+### AI USAGE
+AI also was used for a lot of my code. I used AI(Gemini) to help me code how the LCD displays for me. It was extremely helpful as it saved me a lot of time. I also used Gemini as a little assistant for me. When I have any questions or how to wire a device, I would use AI to help me. For instance, I would ask AI "Where does the VCC and VSC plugged? Where would I plug my analog pin onto my LCD display?" AI would always answer these questions with precision and it really helped me. Additionally, for coding my buzzer, I initially coded for it, but then it wouldn't buzz for 5 second. So I asked AI and it gave me a corrected code which solved my problem. Overall, AI (Gemini) was really helpful in both coding for me and providing me with valuable information. 
+
 
 <video src="video1.mp4" type="video/mp4" controls width="600">
   Your browser does not support the video tag.
 </video>
 
 This video showcases my LCD design with the button functioning before I added the buzzer. 
+
+
+
+
  
 
 
