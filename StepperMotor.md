@@ -1,4 +1,4 @@
-# Stepper Motor With Sean Wei and Watchi Manwichachai
+# Stepper Motor With Sean Wei and Wachi Manwichachai
 
 ## Materials
 **Arduino Uno**: ATmega328P Microcontroller Board | 1 | Executes stepper control code and sends positioning signals. |
