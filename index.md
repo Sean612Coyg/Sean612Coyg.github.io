@@ -11,6 +11,14 @@ description: I used an LCD screen to display the timer of my alarm. I then used 
 
 [View my Arduino Project](ARDUINO.md)
 
+## Project two
+title: Stepper Motor 2D scanner
+
+description: ...
+
+[View my 2D scanner Project](StepperMotor.md)
+
+
 
 ## Experiences
 I have experiences with coding python, some c++, Arduino, and circuits. 
