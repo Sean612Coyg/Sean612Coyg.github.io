@@ -1,9 +1,1 @@
 theme: jekyll-theme-minimal
-
-title: StepperMotor.md
-description: A project documentation site for StepperMotor.md
-url: "https://yourusername.github.io"
-baseurl: "/StepperMotor.md"
-
-# Built-in GitHub Pages theme
-theme: minima
