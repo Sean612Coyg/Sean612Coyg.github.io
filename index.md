@@ -11,12 +11,21 @@ description: I used an LCD screen to display the timer of my alarm. I then used 
 
 [View my Arduino Project](ARDUINO.md)
 
+## Project three
+title: A card game built with AI
+
+description: A HTML5 implementation of (斗地主), a card game featuring 2 "smart" AI players, yourself and the actual game rules to "斗地主“.
+
+[View my Autopsy Project](Autopsy.md)
+
 
 ## Experiences
 I have experiences with coding python, some c++, Arduino, and circuits. 
 
 ## Inspirations and motivations
 I want to create small technologies that could benefit my daily life and the life of people around me. Some inspirations are my friends, the teacher, and my family. 
+
+
 
 
 
