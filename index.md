@@ -12,11 +12,10 @@ description: I used an LCD screen to display the timer of my alarm. I then used 
 [View my Arduino Project](ARDUINO.md)
 
 ## Project three
-title: A card game built with AI
+title: Tic Tac Toe game built using HTML
+description: A basic and simple tic tac toe game playing against AI.
 
-description: A HTML5 implementation of (斗地主), a card game featuring 2 "smart" AI players, yourself and the actual game rules to "斗地主“.
-
-[View my Autopsy Project](Autopsy.md)
+[View my Autopsy Project](autopsy.md)
 
 
 ## Experiences
