@@ -56,8 +56,6 @@ After we are done with measuring the AMP for the motor driver, we proceeded with
 
 
 
-https://github.com/user-attachments/assets/10059423-8619-45e6-a166-920d9732954a
-
 
 
 
