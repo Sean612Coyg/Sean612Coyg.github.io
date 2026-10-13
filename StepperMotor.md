@@ -29,7 +29,10 @@ We examined the youtube video attached above during the first few days. It was a
 
 
 
-
+<video src="stepper1.mp4" type="video/mp4" controls width="600">
+  Your browser does not support the video tag.
+</video>
+/*'
 
 
 https://github.com/user-attachments/assets/35144cd1-8e8e-451d-b831-90994c7106ce
