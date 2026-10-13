@@ -27,5 +27,8 @@ Youtube was one of the most important element for us to finish this assignment. 
 
 We examined the youtube video attached above during the first few days. It was a great introduction for using the motor driver. The driver was also very fragile and therefore the video helped prevent the motor coils from overheating and burning. However, the motor driver is not automatic to the power that we wanted, so we limit the output by adjusting the potentiometer and measuring the Direct Current Voltage with a multimeter. 
 
-
+<video src="step1.mp4" type="video/mp4" controls width="600">
+  Your browser does not support the video tag.
+</video>
+/*
 
