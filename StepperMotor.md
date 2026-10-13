@@ -12,3 +12,13 @@
 **External Battery / Power Supply**: DC12V 5A 60W | 1 | Dedicated power to the stepper motor to prevent microcontroller brownouts. |
 
 **Jumper Wires**: Male-to-Male & Male-to-Female | Assorted | Connects microcontroller digital pins, driver board, and power rails. |
+
+
+## AI usage 
+
+AI was critical in this project. It helped us code, understand the code that it gave us and help us solve problems regarding the code. Some prompts that we would give AI is, "Help us program the stepper motor so it could sync like a 3D scanner. Although it was easy to copy the code, AI helped us understand it even more. I would ask AI what a certain code meant, and it would give me a thorough explanation which was extremely useful. Google also helped us understand how to build the circuit. For example, if we did not understand how the driver motor worked, we would search on google the circuit diagram. 
+
+Youtube was one of the most important element for us to finish this assignment. There was this one 30 minute video that went through how to use the stepper motor and driver, how to wire it correctly, and how to use the Multimeter. It took a long time for us to understand how to measure the AMP in the motor driver. Then after watching the Youtube video, we understood it and it was a huge milestone for us. 
+
+
+
