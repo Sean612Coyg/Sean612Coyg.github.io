@@ -33,9 +33,8 @@ We examined the youtube video attached above during the first few days. It was a
 /*
 
 
+https://github.com/user-attachments/assets/7b9f2feb-e525-4810-84f5-eb88e077c953
 
-
-https://github.com/user-attachments/assets/d4e91096-f759-4fc8-8a86-2ff9ff35a7c6
 
 
 
@@ -56,8 +55,7 @@ After we are done with measuring the AMP for the motor driver, we proceeded with
 
 
 
-
-
+https://github.com/user-attachments/assets/d4e91096-f759-4fc8-8a86-2ff9ff35a7c6
 
 
 
