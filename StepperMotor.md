@@ -48,14 +48,13 @@ After we are done with measuring the AMP for the motor driver, we proceeded with
 
 ### Final Project
 
-<video src="video1.mp4" type="video/mp4" controls width="600">
+<video src="step2.mp4" type="video/mp4" controls width="600">
   Your browser does not support the video tag.
 </video>
 /*'
 
 
 
-https://github.com/user-attachments/assets/d4e91096-f759-4fc8-8a86-2ff9ff35a7c6
 
 
 
