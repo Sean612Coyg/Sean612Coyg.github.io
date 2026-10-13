@@ -20,5 +20,12 @@ AI was critical in this project. It helped us code, understand the code that it 
 
 Youtube was one of the most important element for us to finish this assignment. There was this one 30 minute video that went through how to use the stepper motor and driver, how to wire it correctly, and how to use the Multimeter. It took a long time for us to understand how to measure the AMP in the motor driver. Then after watching the Youtube video, we understood it and it was a huge milestone for us. 
 
+[View the video](https://www.youtube.com/watch?v=wcLeXXATCR4&t=687s)
+
+
+## First few days
+
+We examined the youtube video attached above during the first few days. It was a great introduction for using the motor driver. The driver was also very fragile and therefore the video helped prevent the motor coils from overheating and burning. However, the motor driver is not automatic to the power that we wanted, so we limit the output by adjusting the potentiometer and measuring the Direct Current Voltage with a multimeter. 
+
 
 
