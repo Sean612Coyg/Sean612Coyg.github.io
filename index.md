@@ -11,6 +11,11 @@ description: I used an LCD screen to display the timer of my alarm. I then used 
 
 [View my Arduino Project](ARDUINO.md)
 
+## Project two
+
+[View my StepperMotor Project with Wachi](StepperMotor.md)
+
+
 ## Project three
 title: Tic Tac Toe game built using HTML
 description: A basic and simple tic tac toe game playing against AI.
