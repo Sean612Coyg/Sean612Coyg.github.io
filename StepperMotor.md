@@ -27,15 +27,12 @@ Youtube was one of the most important element for us to finish this assignment. 
 
 We examined the youtube video attached above during the first few days. It was a great introduction for using the motor driver. The driver was also very fragile and therefore the video helped prevent the motor coils from overheating and burning. However, the motor driver is not automatic to the power that we wanted, so we limit the output by adjusting the potentiometer and measuring the Direct Current Voltage with a multimeter. AI also contributed to the wiring of the first prototype. It would show us the wiring diagram and respond by saying the VSS pin goes to ground. 
 
-<video src="stepper1.mp4" type="video/mp4" controls width="600">
-  Your browser does not support the video tag.
-</video>
-/*
 
 
-https://github.com/user-attachments/assets/7b9f2feb-e525-4810-84f5-eb88e077c953
 
 
+
+https://github.com/user-attachments/assets/35144cd1-8e8e-451d-b831-90994c7106ce
 
 
 
