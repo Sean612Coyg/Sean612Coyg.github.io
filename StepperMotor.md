@@ -33,6 +33,7 @@ We examined the youtube video attached above during the first few days. It was a
 /*
 
 
+
 https://github.com/user-attachments/assets/8d14952f-ca38-4dc0-b073-db2a9688dcab
 
 
@@ -45,9 +46,18 @@ After we are done with measuring the AMP for the motor driver, we proceeded with
 
 ### Final Project
 
-<video src="step2.mp4" type="video/mp4" controls width="600">
+<video src="video1.mp4" type="video/mp4" controls width="600">
   Your browser does not support the video tag.
 </video>
 /*'
+
+
+
+https://github.com/user-attachments/assets/10059423-8619-45e6-a166-920d9732954a
+
+
+
+
+
 
 In this video the stepper motor was turning with the command of the code with a periodic turn of 90 degrees to make the object appear more visual on the 3D scanning site. I also used some AI to help me explain how to turn the motor and I added the code myself with Wachi into the actual arduino code.
