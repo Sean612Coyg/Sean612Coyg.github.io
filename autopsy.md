@@ -1,4 +1,4 @@
-[gemini-code-1791924364869.js](https://github.com/user-attachments/files/33405831/gemini-code-1791924364869.js)# Tic Tac Toe
+# Tic Tac Toe
 
 ## Process
 
