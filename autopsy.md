@@ -21,6 +21,7 @@ The layout is controlled via CSS Grid rather than fixed canvas pixel dimensions.
 If you modify grid-template-columns: **repeat(3, 100px)** or the **.cell width and height**, the grid cells will be larger or smaller while maintaining a  3 x 3 layout. Because it's DOM-based rather than canvas, text scaling (font-size: 3em) automatically scales the X and O markers to match the new box dimensions.
 
 
+
 **State Variables:** The game tracks its data using four state variables that is at the start of the <script> block:
 
 <img width="206" height="50" alt="image" src="https://github.com/user-attachments/assets/5517a015-28a3-4b62-86e6-cec130fcbf37" />
@@ -29,6 +30,7 @@ let board = Array(9).fill('');     // Tracks the state of each cell ('X', 'O', o
 let currentPlayer = 'X';           // Tracks whose turn it is ('X' or 'O')
 let gameOver = false;              // Boolean flag locking the board when a win or draw occurs
 let scores = { X: 0, O: 0 };       // Keeps track of the cumulative session score
+
 
 
 **The game loop:** Tic Tac Toe does not need a continuous loop unlike other games because it is a event based game meaning that the game responds by the click of a mouse. Thus there is no need for a continuous loop. 
@@ -68,11 +70,62 @@ function makeMove(i) {
 
 
 
+
 **Input Handling:** When the mouse click the 3x3 grid, the input is registered. The event listener is the attached to the 9 cell grid when generated. 
 
 When a valid cell is clicked, makeMove(i) checks if **gameOver** is true or if the cell is already occupied. If true, the function <makeMove> assigns currentPlayer to board[i], updates the button's text content, and toggles CSS classes (x,o).
 
 This is how the game register the inputs. 
-  
+
+
+
+**Collision / win-lose logic:** The checkWin() function compares the current board array values against the WIN_COMBOS index sets:
+
+<img width="600" height="142" alt="Screenshot 2026-10-15 at 10 54 13 AM" src="https://github.com/user-attachments/assets/d9d1440a-a834-480a-b149-b8da87666486" />
+
+
+Conditions:
+
+1. uses checkWin() to check if you won. If a value is detected then you win.
+2.  If !board.includes('') (when all cells are non-empty and no win was detected). meaning if there if all cells are non empty and no element(x,o) is filled 3 in a row it is a tie.
+
+
+**scoring:** The code line that initialize the score is: let scores = { X: 0, O: 0 };
+
+
+When a player wins, the score is incremented and written to the DOM:
+
+<img width="508" height="67" alt="Screenshot 2026-10-15 at 4 57 58 PM" src="https://github.com/user-attachments/assets/a67c2f3d-99d7-4baf-9d37-ea4008d670a3" />
+
+This is basically how it is calculated. 
+
+### If still wondering how the points are tallied:
+
+When a player makes a move, the function checkWin() immediately evaluates if that move completed any of the 8 winning combinations (rows, columns, or diagonals). If it finds a match, it returns that winning line, confirming the current player (currentPlayer) has won.
+
+
+
+### Based on your process, what you noticed, and what you learned, set some meaningful goals for the week. Entries will be graded on the clarity of your goals, and how they relate to your documented, in-class process.
+
+
+**Some cool innovations and ideas that I learned:**
+
+Tic Tac Toe that WebbGPT coded for me uses an event-driven DOM model using standard HTML <button> elements inside a CSS Grid layout different from the traditional <canvas>.
+
+
+Instead of running a continuous game loop (requestAnimationFrame), state updates and UI re-renders only occur when a user fires a click event.
+
+Win detection relies on comparing array indices against predefined index patterns (WIN_COMBOS), triggering score increments on the scores object.
+
+
+### Goals
+
+To do a more advanced game and to educate others about it or helping others learn Chinese through my game. Therefore, I decide to do a game dealing with the traditional Chinese poker game, "斗地主“ where there are 3 players and the first one to play all their cards win. It has a complicated rule set that a hint button would explain in the beginning of the game. There would be pinyin on each input and hint for the game to actually educated the person.
+
+
+
+
+
+
 
 
