@@ -128,4 +128,17 @@ To do a more advanced game and to educate others about it or helping others lear
 
 
 
+# 斗地主
+
+
+## Introduction
+As I fully understand how to code the margin and syntax for HTML, I wanted some challenge, so I decided to create a game with AI about the traditional Chinese Poker game called, "斗地主“.
+This game is a really complicated game involving 50+ rules and diverse ways to play the cards. 
+
+
+
+
+
+
+
 
