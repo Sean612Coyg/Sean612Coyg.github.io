@@ -133,7 +133,23 @@ To do a more advanced game and to educate others about it or helping others lear
 
 ## Introduction
 As I fully understand how to code the margin and syntax for HTML, I wanted some challenge, so I decided to create a game with AI about the traditional Chinese Poker game called, "斗地主“.
-This game is a really complicated game involving 50+ rules and diverse ways to play the cards. 
+
+This game is a really complicated game involving 50+ rules and diverse ways to play the cards. I have attached the rule set to the game in the button where it says rules. I have also attached it to the original primary source. Just translate the rules to English in your own browser. 
+
+[Rules](https://baike.baidu.com/item/欢乐斗地主/2754884)
+
+
+
+
+
+
+
+
+
+
+
+# Sources
+https://baike.baidu.com/item/欢乐斗地主/2754884
 
 
 
