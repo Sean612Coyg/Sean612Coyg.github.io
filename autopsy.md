@@ -4,6 +4,7 @@
 
 During class today, I used WebbGPT to create a functional, clean, interactive Tic Tac Toe game built with HTML and some JavaScript. Instead of using "canvas", WebbGPT used CSS grid layout with some button elements for a more interactive and responsive layout.
 
+
 <img width="707" height="407" alt="image" src="https://github.com/user-attachments/assets/a0407bb1-9390-4b34-befc-44650462203c" />
 
 ## Code Explanation
@@ -129,14 +130,23 @@ To do a more advanced game and to educate others about it or helping others lear
 
 
 # 斗地主
-
+[Game](https://share.gemini.google/F01ssh6HYkqe)
 
 ## Introduction
+
 As I fully understand how to code the margin and syntax for HTML, I wanted some challenge, so I decided to create a game with AI about the traditional Chinese Poker game called, "斗地主“.
 
 This game is a really complicated game involving 50+ rules and diverse ways to play the cards. I have attached the rule set to the game in the button where it says rules. I have also attached it to the original primary source. Just translate the rules to English in your own browser. 
 
 [Rules](https://baike.baidu.com/item/欢乐斗地主/2754884)
+
+
+
+## AI usage
+AI helped me code everything for my project. I was able to do a few tweaks with AI, adding a bit of delay time for each person to play their cards. This makes the game more realistic and gives time for the player to realize what is happening. Additionally, I also edited the AI's background color for my game. Initially it was just blue and had no background. I changed the RGB color of the blue to green so the cards stand out a little bit more. 
+
+
+Some prompts that I gave AI was, "Could you help me code a game with the ruleset attached in the hyperlink. 
 
 
 
