@@ -23,6 +23,12 @@ description: A basic and simple tic tac toe game playing against AI.
 [View my Autopsy Project](autopsy.md)
 
 
+## Project four
+
+Joystick with my friends 
+
+[View my Joystick Project](Game.md)
+
 ## Experiences
 I have experiences with coding python, some c++, Arduino, and circuits. 
 
