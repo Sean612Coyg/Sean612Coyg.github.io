@@ -77,6 +77,21 @@ We then proceeded to test the thumb joystick to make sure moving it left and rig
 
 
 
+
+# Things I learned
+
+1. Hardware-Driven Cursor Navigation: Maps physical joystick inputs directly to a dynamic UI cursor index (focusedCardIndex) to highlight cards visually on screen before committing a play.
+  
+2. Non-Blocking AI Delays: Uses asynchronous timer functions (setTimeout) to simulate 3–5 second human-like AI thinking periods without locking the browser UI thread.
+ 
+3. Real-Time LED Indicators: Triggers physical breadboard LEDs (digitalWrite()) in response to browser turn changes, offering visual feedback outside the digital screen.   
+
+4. Algorithmic Mechanics: Features the Fisher-Yates Shuffle Algorithm to achieve an unbiased $O(n)$ randomized card deck shuffle each round.
+
+5. Web Serial API Integration: Establishes direct browser-to-hardware communication over USB, bypassing the need for secondary local servers (e.g., Node.js or WebSocket bridges).
+
+6. Analog Signal Processing & Thresholding: Reads continuous voltage signals from the joystick's X/Y potentiometers (analogRead()) and applies deadzones and movement locks to prevent input jitter or unintended double-scrolling.   
+
  ### Final Video
 
 
