@@ -40,3 +40,45 @@ AI also help me write the codes and truely understand them.
 
 
 
+# Day one
+
+Day one I was brainstorming with my groupmates about some possible designs:
+
+1. Using a button for playing the cards and joystick for moving the cursor.
+
+2. Making the joystick the most important component, the pressing of it controls the card
+
+3. LED that symbolizes the turn, a joystick that only controls the direction of movement and a button that plays the card and skips turns.
+
+
+# Day two and three
+
+Day two and three me and my groupmates start to lock-in and do the work. We completed the code and during the upload we encountered the issue of how the code doesn't really connect to the website game. 
+
+Some things that we did to resolve:
+
+Checking the Serial Baud Rate: Both the Arduino sketch (Serial.begin(9600)) and the browser-side script need to share the exact same baud rate, or the data gets scrambled into unreadable characters.
+
+Closing Conflicting Ports: If the Arduino IDE's Serial Monitor window is left open, the browser's Web Serial API gets blocked from accessing the USB port because only one program can use it at a time.
+
+Using a Compatible Browser: The Web Serial API requires a Chromium-based browser like Google Chrome or Microsoft Edge to prompt the user to select the device's COM port.
+
+Formatting Data Correctly: Making sure the Arduino sends data ending with a newline (Serial.println()) helps the JavaScript side parse lines cleanly.
+
+
+
+Then we uploaded the code and we were able to start playing and controlling the cards that we play. 
+<img width="1320" height="990" alt="469e647437387340536845f555a83dee" src="https://github.com/user-attachments/assets/37e5fded-00a7-44af-8182-1f334e7e5ad2" />
+
+
+
+
+We then proceeded to test the thumb joystick to make sure moving it left and right smoothly navigated through our hand of cards, pushing it up selected them, and pressing the pushbutton successfully submitted our plays. Then the LED and button. 
+
+
+
+ ### Final Video
+
+ 
+
+
