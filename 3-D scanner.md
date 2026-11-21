@@ -38,9 +38,21 @@ These two videos both helped us setup the stepper motor and allowed us to furthe
 
 ### First days
 
+We visualized a build that we would later based our project on. 
+
+<img width="1166" height="1243" alt="image" src="https://github.com/user-attachments/assets/02745412-a3bd-47e1-b677-ef94eacf1234" />
+
 The first days were just remembering what stepper motor were. We would look at our past documentaries on GitHub and review the basic fundamentals of how to wire the stepper motor and the driver. 
 
 
+### The first week
+
+The first week went by slow, we started our build but never actually did major innovations on. We were stuck on the multimeter for a long time and wasn't able to get it to work. Wachi also took a long time to figure out the code for the spinning of the stepper motor. 
+
+
+### Second week
+
+During the second week, we really started to progress. We had a concrete blueprint to base our design on. Moreover, thanks to Dr. Dzula we were able to use the robotics lab and the tools in there. It was really helpful and it allowed us to add the layering design for the 3-d scanner.
 
 
 ## Trouble Shoot
@@ -60,6 +72,77 @@ But then quickly we realized that the apadter is still too weak to carry the wei
 3. Another problem was how we needed a flat surface to make the 3-D scanner flat so it could stand up. John Cadded 4 corner piece that made the surface flat.
 
 <img width="810" height="1440" alt="a1e762bb8b7f64162f2bbee8043d27bc" src="https://github.com/user-attachments/assets/d6ebe244-3444-459f-bff2-a801b9c8734d" />
+
+
+
+
+### Arduino Programming and Motor Testing
+
+Another major part of our project involved connecting the stepper motors to the Arduino and writing code to control them. We used an Arduino Uno R3 and experimented with different motor setups. Our goal was to independently control the motor responsible for the rotating platform and the motor responsible for the vertical movement mechanism. However, at this stage, our Arduino program is still a very early prototype.
+
+### Code
+const int stepX = 2;
+const int dirX = 5;
+
+const int stepY = 3;
+const int dirY = 6;
+
+const int enablePin = 8;
+
+// Smaller interval = faster rotation
+const unsigned long fastSpeed = 5000;
+const unsigned long slowSpeed = 20000;
+
+unsigned long lastStepX = 0;
+unsigned long lastStepY = 0;
+
+void setup() {
+  pinMode(stepX, OUTPUT);
+  pinMode(dirX, OUTPUT);
+
+  pinMode(stepY, OUTPUT);
+  pinMode(dirY, OUTPUT);
+
+  pinMode(enablePin, OUTPUT);
+
+  digitalWrite(dirX, HIGH);
+  digitalWrite(dirY, HIGH);
+
+  digitalWrite(enablePin, LOW);
+}
+
+void loop() {
+  unsigned long currentTime = micros();
+
+  // Motor 1: Fast rotation
+  if (currentTime - lastStepX >= fastSpeed) {
+    lastStepX = currentTime;
+
+    digitalWrite(stepX, HIGH);
+    delayMicroseconds(5);
+    digitalWrite(stepX, LOW);
+  }
+
+  // Motor 2: Slow rotation
+  if (currentTime - lastStepY >= slowSpeed) {
+    lastStepY = currentTime;
+
+    digitalWrite(stepY, HIGH);
+    delayMicroseconds(5);
+    digitalWrite(stepY, LOW);
+  }
+}
+
+
+Our current program is designed mainly to test whether the motors can rotate continuously. We have experimented with running two stepper motors at different speeds. One motor is intended for the rotating object platform, while the other is intended for the vertical belt mechanism. At the moment, our code simply keeps the motors spinning - one slow, the other fast. It does not yet perform an automated 3D scanning sequence.
+
+
+
+### Physical Design
+
+<img width="1702" height="1276" alt="18849c3f712d696c26f47cd1121db29f" src="https://github.com/user-attachments/assets/6ca6ce01-8d4d-4c94-a1d7-8bf4373ddf0b" />
+
+
 
 
 
