@@ -54,6 +54,10 @@ The first week went by slow, we started our build but never actually did major i
 
 During the second week, we really started to progress. We had a concrete blueprint to base our design on. Moreover, thanks to Dr. Dzula we were able to use the robotics lab and the tools in there. It was really helpful and it allowed us to add the layering design for the 3-d scanner.
 
+<video src="stepM.mp4" type="video/mp4" controls width="600">
+  Your browser does not support the video tag.
+</video>
+/*
 
 ## Trouble Shoot
 
@@ -72,7 +76,6 @@ But then quickly we realized that the apadter is still too weak to carry the wei
 3. Another problem was how we needed a flat surface to make the 3-D scanner flat so it could stand up. John Cadded 4 corner piece that made the surface flat.
 
 <img width="810" height="1440" alt="a1e762bb8b7f64162f2bbee8043d27bc" src="https://github.com/user-attachments/assets/d6ebe244-3444-459f-bff2-a801b9c8734d" />
-
 
 
 
