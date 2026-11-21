@@ -148,6 +148,12 @@ Our current program is designed mainly to test whether the motors can rotate con
 
 
 
+### Future of the project
+
+We still had not finished the project yet, lacking the ability to actually scan the object and export it onto a website or program. However, we are really close to that as we have a functioning pulley system that allows the sharp sensor to scan the object at anywhere and having no major scanning flaws. 
+
+To improve, we have to either borrow Kaiden's scanning program or develop one ourselves and export the 3-D scan.
+
 
 
 
