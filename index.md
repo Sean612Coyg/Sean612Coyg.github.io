@@ -29,6 +29,13 @@ Joystick with my friends
 
 [View my Joystick Project](Game.md)
 
+## Project five
+
+DIY 3-D scanner
+
+[View my 3-D Scanner project](3-D scanner.md)
+
+
 ## Experiences
 I have experiences with coding python, some c++, Arduino, and circuits. 
 
